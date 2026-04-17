@@ -41,6 +41,32 @@ Once the build is successful, use **`RUN.bat`** in the root folder to launch the
 ./RUN.bat
 ```
 
+OR
+
+1. run full vscode using:
+
+    ```bash
+    ./scripts/code.bat
+    ```
+
+1. run vscode cli:
+
+    ```bash
+    ./scripts/code-cli.bat
+    ```
+
+1. run vscode web:
+
+    ```bash
+    ./scripts/code-web.bat
+    ```
+
+1. run vscode server:
+
+    ```bash
+    ./scripts/code-server.bat
+    ```
+
 ## Troubleshooting
 
 * **Long Build Times**: Ensure Windows Defender or other antivirus software is not scanning the `V:` drive or the `.installation_tools` directory.
