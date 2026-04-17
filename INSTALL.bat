@@ -18,7 +18,7 @@ if not exist "%VCVARS_PATH%" (
 
 :: Detect Node version from .nvmrc
 if not exist "%BASE_DIR%\.nvmrc" (
-    echo Error: .nvmrc not found in %BASE_DIR%
+    echo Error: .nvmrc not found in "%BASE_DIR%"
     pause && exit /b 1
 )
 set /p NODE_VERSION=<"%BASE_DIR%\.nvmrc"
@@ -35,7 +35,7 @@ if not exist "%NODE_DIR%" (
         if errorlevel 1 (echo Error: Extraction failed. && pause && exit /b 1)
     ) else (
         echo Error: Neither the Node folder nor the Zip file were found in .installation_tools.
-        echo Expected: %NODE_ZIP%
+        echo Expected: "%NODE_ZIP%"
         pause && exit /b 1
     )
 ) else (
