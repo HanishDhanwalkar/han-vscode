@@ -11,8 +11,6 @@ hancode/                     <-- Root Folder (This Repository)
 ├── .installation_tools/     <-- Build tools and Node.js zip/folder
 │   └── node-v<version>-win-x64.zip
 ├── .nvmrc                   <-- Defines required Node version
-├── INSTALL.bat              <-- Automated Installation Script
-└── RUN.bat                  <-- Application Launch Script
 ```
 
 ## Setup and Installation
@@ -27,21 +25,24 @@ Ensure the following are installed and configured on your system:
 
 ### 3. Build the Project
 
-Run **`INSTALL.bat`** from the `hancode` root directory.
+#### Requirements [NPM]
+
+Strictly requires npm version < 11.2
 
 ```bash
-./INSTALL.bat
+npm install -g npm@11.1.0
+```
+
+#### Build
+
+```npm
+npm install
+npm run compile
 ```
 
 ### 4. Run Hancode
 
-Once the build is successful, use **`RUN.bat`** in the root folder to launch the application.
-
-```bash
-./RUN.bat
-```
-
-OR
+Once the build is successful, Run one of the following:
 
 1. run full vscode using:
 
@@ -69,5 +70,4 @@ OR
 
 ## Troubleshooting
 
-* **Long Build Times**: Ensure Windows Defender or other antivirus software is not scanning the `V:` drive or the `.installation_tools` directory.
 * **Terminal Errors**: If the integrated terminal fails to load `conpty.node`, run `npm rebuild node-pty` within the mapped environment.
